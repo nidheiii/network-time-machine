@@ -103,4 +103,4 @@ Type these commands directly inside the **NTM Interactive Terminal** on the dash
 
 ## 📄 License & Attribution
 
-Developed and maintained by **Nidhi** © 2026. Private Proprietary Codebase for local GNS3 simulation environments.
+Developed and maintained by **NTM** © 2026. Private Proprietary Codebase for local GNS3 simulation environments.
