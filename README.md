@@ -83,7 +83,7 @@ graph TD
 
 ---
 
-## 💻 CLI Commands Cheat Sheet
+## 💻 CLI Commands
 
 Type these commands directly inside the **NTM Interactive Terminal** on the dashboard or use the click shortcuts:
 
