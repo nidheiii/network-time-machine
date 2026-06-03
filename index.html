@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Network Time Machine (NTM v1) — Product Landing Page</title>
-  <meta name="description" content="Welcome to Network Time Machine (NTM v1) landing page. Standalone software packaging with digital twin live network observability and forensic timeline travel replay for GNS3 emulation.">
+  <title>Network Time Machine (NTM v2) - Cisco Config Time Machine</title>
+  <meta name="description" content="Network Time Machine v2 pulls Cisco running-configs over SSH, diffs changes automatically, and sends webhook alerts when configuration drift is detected.">
   
   <!-- Premium Font & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,12 +32,13 @@
       
       <ul class="nav-menu">
         <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#cli" class="nav-link">CLI</a></li>
         <li><a href="#audience" class="nav-link">Who Is It For</a></li>
         <li><a href="#setup" class="nav-link">Setup Guide</a></li>
         <li><a href="#downloads" class="nav-link">Downloads</a></li>
       </ul>
       
-      <a href="#downloads" class="nav-btn">Get NTM v1</a>
+      <a href="#downloads" class="nav-btn">Get NTM v2</a>
     </div>
   </header>
 
@@ -45,19 +46,23 @@
   <section class="hero container">
     <div class="badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-      Standalone NTM v1 Release
+      NTM v2 Cisco Automation Release
     </div>
-    <h2>Forensic Time-Travel Replay & Observability</h2>
-    <p class="tagline">A powerful digital twin monitoring suite for GNS3 virtual topologies. Replay historical states, analyze outage blast radiuses, and proxy interactive consoles—all inside a gorgeous, zero-dependency standalone application.</p>
+    <h2>Cisco Config Time Machine</h2>
+    <p class="tagline">Pull Cisco running-configs over SSH, compare every backup against the previous version, and alert Discord, Slack, or Telegram the moment configuration drift appears.</p>
     
     <div class="hero-actions">
-      <a href="NTM_v1_Setup.exe" download="NTM_v1_Setup.exe" class="btn-primary">
+      <a href="NTM_v2_Setup.exe" download="NTM_v2_Setup.exe" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-        Download Setup Installer (NTM_v1_Setup.exe)
+        Download Setup Installer (NTM_v2_Setup.exe)
       </a>
       <a href="NTM.exe" download="NTM.exe" class="btn-secondary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
         Download Portable App (NTM.exe)
+      </a>
+      <a href="NTM_v2_CLI_Command_Set.txt" download="NTM_v2_CLI_Command_Set.txt" class="btn-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+        Download CLI Command Set
       </a>
     </div>
 
@@ -69,7 +74,7 @@
           <span class="mock-dot yellow"></span>
           <span class="mock-dot green"></span>
         </div>
-        <div class="mock-title">NTM Time Travel Replay Console Simulator</div>
+        <div class="mock-title">NTM Cisco Config Backup & Diff Console</div>
         <div style="width: 40px;"></div>
       </div>
 
@@ -117,7 +122,7 @@
           <div class="mock-sidebar-section" id="mock-inspect-panel" style="height: 180px; display: flex; flex-direction: column; gap: 10px; padding-bottom: 10px; overflow: hidden; flex-shrink: 0;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; margin-bottom: 4px;">
               <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--neon-cyan); font-weight: 700;">Mock Node Inspector</span>
-              <span style="font-size: 0.65rem; color: var(--text-muted); cursor: pointer;">➖</span>
+              <span style="font-size: 0.65rem; color: var(--text-muted); cursor: pointer;">-</span>
             </div>
             <div class="status-row">
               <span class="status-label">Stability</span>
@@ -144,7 +149,7 @@
           <div class="mock-sidebar-section" id="mock-terminal-panel" style="flex: 1; display: flex; flex-direction: column; gap: 6px; min-height: 80px; overflow: hidden;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; margin-bottom: 4px;">
               <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--neon-blue); font-weight: 700;">Mock Interactive Terminal</span>
-              <span style="font-size: 0.65rem; color: var(--text-muted); cursor: pointer;">➖</span>
+              <span style="font-size: 0.65rem; color: var(--text-muted); cursor: pointer;">-</span>
             </div>
             <div class="log-box" id="mock-logs" style="flex: 1; margin: 0; height: 100%;"></div>
           </div>
@@ -167,11 +172,60 @@
     </div>
   </section>
 
+  <!-- CLI COMMAND SET -->
+  <section class="cli-section container" id="cli">
+    <div class="section-title">
+      <h3>NTM v2 Operational CLI</h3>
+      <p>Modular commands for topology, replay, protocols, telemetry, RCA, simulation, reporting, and workspaces.</p>
+    </div>
+
+    <div class="cli-panel">
+      <div class="cli-panel-head">
+        <div>
+          <span class="cli-kicker">Command Structure</span>
+          <h4><code>ntm &lt;module&gt; &lt;action&gt; [options]</code></h4>
+        </div>
+        <a href="NTM_v2_CLI_Command_Set.txt" download="NTM_v2_CLI_Command_Set.txt" class="btn-primary">Download Command Reference</a>
+      </div>
+
+      <div class="cli-grid">
+        <div class="cli-group">
+          <h5>Core Replay</h5>
+          <code>ntm replay start</code>
+          <code>ntm replay timeline --from 12:30 --to 12:45</code>
+          <code>ntm replay compare session1 session2</code>
+          <code>ntm replay restore</code>
+        </div>
+        <div class="cli-group">
+          <h5>Topology</h5>
+          <code>ntm topology show</code>
+          <code>ntm topology historical --timestamp 12:41:03</code>
+          <code>ntm topology trace PC1 PC4</code>
+          <code>ntm topology dependencies</code>
+        </div>
+        <div class="cli-group">
+          <h5>Protocols</h5>
+          <code>ntm ospf neighbors</code>
+          <code>ntm ospf convergence</code>
+          <code>ntm stp blocked</code>
+          <code>ntm bgp bestpath</code>
+        </div>
+        <div class="cli-group">
+          <h5>RCA and Exports</h5>
+          <code>ntm rca blast-radius SW1</code>
+          <code>ntm events correlate</code>
+          <code>ntm export timeline</code>
+          <code>ntm export json</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES -->
   <section class="features container" id="features">
     <div class="section-title">
-      <h3>Premium Observability Features</h3>
-      <p>NTM v1 overlays your simulation sandbox with the telemetry systems utilized by modern cloud companies.</p>
+      <h3>NTM v2 Core Features</h3>
+      <p>Three practical CCNA-ready workflows: Cisco SSH config pull, automatic config diff, and webhook change alerts.</p>
     </div>
 
     <div class="features-grid">
@@ -180,8 +234,8 @@
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
         </div>
-        <h4>Dual-Timeline Replay Engine</h4>
-        <p>Rewind/forward dynamic states with media controls on a static scrubber. Track dynamic uptime on the Live Timeline with real-time View Drift comparison.</p>
+        <h4>Cisco Automation via SSH</h4>
+        <p>Use Netmiko to log into Cisco IOS/XE/NX-OS devices and pull the live running-config directly from routers and switches.</p>
       </div>
 
       <!-- Feature 2 -->
@@ -189,8 +243,8 @@
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
         </div>
-        <h4>D3.js Topology Mapping</h4>
-        <p>A high-performance force-directed interface map that groups routing components automatically, shows traffic loads, and alerts anomalies.</p>
+        <h4>Auto-Diff Time Machine</h4>
+        <p>Every new backup is compared against the previous config so interface shutdowns, IP changes, VLAN edits, and routing changes stand out instantly.</p>
       </div>
 
       <!-- Feature 3 -->
@@ -198,8 +252,8 @@
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
         </div>
-        <h4>Embedded Console Tunnel</h4>
-        <p>Integrated Secure proxies translate GNS3 device Telnet streams directly into a single, clean browser-based console proxy.</p>
+        <h4>Webhook Change Alerts</h4>
+        <p>When NTM detects config drift, it sends a concise diff notification to Discord, Slack, or Telegram via webhook.</p>
       </div>
 
       <!-- Feature 4 -->
@@ -207,8 +261,8 @@
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
         </div>
-        <h4>Full Session Save & Load</h4>
-        <p>Save and load full timeline histories as JSON. Travel through multi-frame sessions offline, edit/delete frames, and visualize topologies on the fly.</p>
+        <h4>Scheduled Backup Workflow</h4>
+        <p>Run NTM manually or attach it to Windows Task Scheduler: pull config, diff yesterday's backup, save the snapshot, alert on changes.</p>
       </div>
 
       <!-- Feature 5 -->
@@ -216,8 +270,8 @@
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         </div>
-        <h4>Security Redirect Builtin</h4>
-        <p>Ensures database and cache files write securely to the user's home directory space, avoiding local system directory authorization issues.</p>
+        <h4>Local Config Archive</h4>
+        <p>Backups are written to the user data folder so historical running-config snapshots remain portable and easy to inspect.</p>
       </div>
 
       <!-- Feature 6 -->
@@ -225,8 +279,8 @@
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line><line x1="2" y1="20" x2="22" y2="20"></line></svg>
         </div>
-        <h4>Live Drift & Comparison</h4>
-        <p>Compute downstream failure impact blast radiuses, analyze root causes, and run delta comparison diff logs between live states and frame snapshots.</p>
+        <h4>Resume-Ready Network Ops</h4>
+        <p>Demonstrates Python automation, Cisco device management, configuration auditing, and real-time operational alerting in one focused tool.</p>
       </div>
     </div>
   </section>
@@ -234,8 +288,8 @@
   <!-- AUDIENCE SECTION (WHO CAN USE THIS) -->
   <section class="audience container" id="audience" style="padding: 100px 0; border-bottom: 1px solid var(--border-panel);">
     <div class="section-title">
-      <h3>Who is NTM v1 Designed For?</h3>
-      <p>A multi-functional utility built for engineers, system architects, students, and lab designers.</p>
+      <h3>Who is NTM v2 Designed For?</h3>
+      <p>A focused utility for CCNA learners, lab builders, and network engineers who need configuration visibility.</p>
     </div>
     
     <div class="features-grid">
@@ -281,32 +335,32 @@
   <section class="setup container" id="setup">
     <div class="section-title">
       <h3>Step-by-Step Installation</h3>
-      <p>Configure your NTM v1 platform in minutes with these step-by-step setup guides.</p>
+      <p>Configure your NTM v2 Cisco automation workflow in minutes.</p>
     </div>
 
     <div class="tab-container">
       <div class="tab-headers">
-        <div class="tab-header active" data-tab="prereqs">1. GNS3 Prereqs</div>
+        <div class="tab-header active" data-tab="prereqs">1. Cisco SSH Prereqs</div>
         <div class="tab-header" data-tab="install">2. Install NTM</div>
         <div class="tab-header" data-tab="launch">3. Boot Console</div>
       </div>
 
       <!-- Tab Content 1 -->
       <div class="tab-content active" id="tab-prereqs">
-        <h4>Ensure GNS3 Emulator is Running</h4>
-        <p>NTM links directly with GNS3's local server APIs to extract device consoles and telemetry.</p>
+        <h4>Enable SSH on Cisco Devices</h4>
+        <p>NTM v2 uses Netmiko over SSH to pull running-config backups from Cisco routers and switches.</p>
         <ul class="step-list">
           <li class="step-item">
             <span class="step-num">1</span>
-            <div class="step-text">Open GNS3 and ensure your local server API is listening on **`http://localhost:3080`**.</div>
+            <div class="step-text">Make sure each Cisco device is reachable from Windows by IP address and has SSH enabled.</div>
           </li>
           <li class="step-item">
             <span class="step-num">2</span>
-            <div class="step-text">Load your target topology project and verify that the virtual nodes (Cisco Routers, L3 Switches, PCs) are powered on.</div>
+            <div class="step-text">Prepare a Cisco username/password with permission to run <code>show running-config</code>.</div>
           </li>
           <li class="step-item">
             <span class="step-num">3</span>
-            <div class="step-text">Ensure the consoles are listening on local ports (e.g. 5000+). NTM will automatically proxy these.</div>
+            <div class="step-text">Optional: create a Discord, Slack, or Telegram webhook URL for instant config-change alerts.</div>
           </li>
         </ul>
       </div>
@@ -314,11 +368,11 @@
       <!-- Tab Content 2 -->
       <div class="tab-content" id="tab-install">
         <h4>Run the Windows Setup Wizard</h4>
-        <p>Install NTM v1 as a standard desktop application using our custom Inno Setup package.</p>
+        <p>Install NTM v2 as a standard desktop application using the Inno Setup package.</p>
         <ul class="step-list">
           <li class="step-item">
             <span class="step-num">1</span>
-            <div class="step-text">Download and double-click **`NTM_v1_Setup.exe`**.</div>
+            <div class="step-text">Download and double-click <code>NTM_v2_Setup.exe</code>.</div>
           </li>
           <li class="step-item">
             <span class="step-num">2</span>
@@ -346,7 +400,7 @@
           </li>
           <li class="step-item">
             <span class="step-num">3</span>
-            <div class="step-text">Load snapshots, play replays, or interact directly via the synchronized web terminal!</div>
+            <div class="step-text">Open the Cisco Config Time Machine panel, save device credentials, add a webhook, then run Pull Config + Diff.</div>
           </li>
         </ul>
       </div>
@@ -357,7 +411,7 @@
   <section class="downloads container" id="downloads">
     <div class="section-title">
       <h3>Ready to Download</h3>
-      <p>Get the portable standalone digital twin observability suite for Windows.</p>
+      <p>Get the portable standalone Cisco config backup, diff, and alerting suite for Windows.</p>
     </div>
 
     <div class="downloads-flex" style="justify-content: center; gap: 30px;">
@@ -367,17 +421,17 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
         </div>
         <h4>Windows Setup Installer</h4>
-        <span class="download-meta">NTM_v1_Setup.exe — ~20.1 MB</span>
+        <span class="download-meta">NTM_v2_Setup.exe - size varies by build</span>
         
         <ul class="download-specs">
-          <li>Standard Setup Wizard Installer (Recommended)</li>
-          <li>Unpacks code and static files inside Program Files</li>
-          <li>Registers Desktop shortcut with custom NTM icon</li>
-          <li>Adds Network Time Machine to Start Menu list</li>
-          <li>Automatic registry entry and full system uninstaller</li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Standard Setup Wizard Installer (Recommended)</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Includes Cisco SSH automation and config diff tooling</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Registers Desktop shortcut with custom NTM icon</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Adds Network Time Machine to Start Menu list</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Automatic registry entry and full system uninstaller</span></li>
         </ul>
         
-        <a href="NTM_v1_Setup.exe" download="NTM_v1_Setup.exe" class="btn-primary" style="width:100%; justify-content:center; background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue)); box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);">Download Setup Installer</a>
+        <a href="NTM_v2_Setup.exe" download="NTM_v2_Setup.exe" class="btn-primary" style="width:100%; justify-content:center; background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue)); box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);">Download Setup Installer</a>
       </div>
 
       <!-- Card 2: Portable App -->
@@ -386,28 +440,45 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
         </div>
         <h4>Windows Portable App</h4>
-        <span class="download-meta">NTM.exe — ~18.4 MB</span>
+        <span class="download-meta">NTM.exe - ~18.6 MB</span>
         
         <ul class="download-specs">
-          <li>Standalone zero-install portable binary</li>
-          <li>Embeds all static visual interface assets</li>
-          <li>Safe user home directory database sandboxing</li>
-          <li>Auto-launch browser dashboard on startup</li>
-          <li>Fully interactive timeline, splitters & diff analysis</li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Standalone zero-install portable binary</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Embeds all static visual interface assets</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Safe user home directory database sandboxing</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Auto-launch browser dashboard on startup</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Pulls Cisco running-configs and highlights config drift</span></li>
         </ul>
         
         <a href="NTM.exe" download="NTM.exe" class="btn-primary" style="width:100%; justify-content:center;">Download Standalone NTM.exe</a>
+      </div>
+
+      <!-- Card 3: CLI Reference -->
+      <div class="download-card" style="width: 440px;">
+        <div class="download-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--neon-green);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+        </div>
+        <h4>CLI Command Reference</h4>
+        <span class="download-meta">NTM_v2_CLI_Command_Set.txt</span>
+        
+        <ul class="download-specs">
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Final modular <code>ntm &lt;module&gt; &lt;action&gt;</code> command set</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Replay, topology, OSPF, STP, BGP, telemetry, RCA, and export commands</span></li>
+          <li><span class="feature-check" aria-hidden="true">&#10003;</span><span>Includes advanced commands like replay compare and blast radius</span></li>
+        </ul>
+        
+        <a href="NTM_v2_CLI_Command_Set.txt" download="NTM_v2_CLI_Command_Set.txt" class="btn-primary" style="width:100%; justify-content:center; background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));">Download CLI Commands</a>
       </div>
     </div>
 
     <!-- Windows Security Note -->
     <div style="max-width: 910px; margin: 40px auto 0; padding: 20px; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 12px; text-align: left; font-size: 0.85rem; line-height: 1.5;">
-      <span style="color: var(--neon-red); font-weight: 700; display: block; margin-bottom: 6px; font-size: 0.95rem;">⚠️ Windows Security Notice for Downloads:</span>
-      When downloading executable binaries (like <code>NTM_v1_Setup.exe</code> or <code>NTM.exe</code>) via a web browser, Windows SmartScreen may show a security alert (<em>"These files can't be opened"</em> or <em>"Unknown Publisher"</em>). To launch the app:
+      <span style="color: var(--neon-red); font-weight: 700; display: block; margin-bottom: 6px; font-size: 0.95rem;">Windows Security Notice for Downloads:</span>
+      When downloading executable binaries (like <code>NTM_v2_Setup.exe</code> or <code>NTM.exe</code>) via a web browser, Windows SmartScreen may show a security alert (<em>"These files can't be opened"</em> or <em>"Unknown Publisher"</em>). To launch the app:
       <ol style="margin-left: 20px; margin-top: 8px; display: flex; flex-direction: column; gap: 4px;">
         <li>Do not run the application directly from the browser's download bar.</li>
         <li>Open your Windows File Explorer and locate the downloaded file in your Downloads folder.</li>
-        <li>Right-click the file (e.g., <code>NTM_v1_Setup.exe</code> or <code>NTM.exe</code>) and select <strong>Properties</strong>.</li>
+        <li>Right-click the file (e.g., <code>NTM_v2_Setup.exe</code> or <code>NTM.exe</code>) and select <strong>Properties</strong>.</li>
         <li>At the bottom of the General tab, look for the Security section, check the <strong>Unblock</strong> box, and click <strong>Apply</strong>.</li>
         <li>Run the file. The setup wizard or portable app will launch instantly without any security blocks!</li>
       </ol>
@@ -424,11 +495,11 @@
     <div class="faq-list">
       <div class="faq-item">
         <h4>Why does Windows say "These files can't be opened" when launching the downloaded executable files?</h4>
-        <p>When you download executable packages (like <code>NTM_v1_Setup.exe</code> or <code>NTM.exe</code>) via a web browser, Windows automatically attaches an "Internet Zone" security block flag to safeguard the file system. To fix this, do not launch the file from the browser's download bar. Instead, locate the file in your Windows File Explorer (e.g. your Downloads folder), right-click the file, open <strong>Properties</strong>, check the <strong>Unblock</strong> option at the bottom of the General tab, click <strong>Apply</strong>, and double-click to run.</p>
+        <p>When you download executable packages (like <code>NTM_v2_Setup.exe</code> or <code>NTM.exe</code>) via a web browser, Windows automatically attaches an "Internet Zone" security block flag to safeguard the file system. To fix this, do not launch the file from the browser's download bar. Instead, locate the file in your Windows File Explorer (e.g. your Downloads folder), right-click the file, open <strong>Properties</strong>, check the <strong>Unblock</strong> option at the bottom of the General tab, click <strong>Apply</strong>, and double-click to run.</p>
       </div>
       <div class="faq-item">
         <h4>Does NTM require internet to work?</h4>
-        <p>No, NTM v1 operates 100% locally on your machine. It requires zero cloud services or internet connection, keeping your GNS3 simulation infrastructure secure and private.</p>
+        <p>No, NTM v2 operates 100% locally on your machine. It requires zero cloud services or internet connection, keeping your GNS3 simulation infrastructure secure and private.</p>
       </div>
       <div class="faq-item">
         <h4>How does offline mode function?</h4>
@@ -453,7 +524,7 @@
         <h4>Network Time Machine</h4>
       </a>
       <div class="footer-text">
-        <p>© 2026 Network Time Machine. Developed by Nidhi.</p>
+        <p>&copy; 2026 Network Time Machine. Developed by Nidhi.</p>
       </div>
     </div>
   </footer>
@@ -461,9 +532,11 @@
   <!-- Toast Toast Popup Notification -->
   <div class="toast" id="toast-popup">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-    <span>✓ Dynamic Action Triggered!</span>
+    <span>Dynamic Action Triggered!</span>
   </div>
 
   <script src="app.js"></script>
 </body>
 </html>
+
+

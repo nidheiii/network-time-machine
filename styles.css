@@ -1,4 +1,4 @@
-/* NTM v1 Premium Product Landing Page CSS
+﻿/* NTM v2 Premium Product Landing Page CSS
    Designed with rich aesthetics, glassmorphism, vibrant neon accents, and smooth animations */
 
 :root {
@@ -615,6 +615,78 @@ header {
   margin: 0 auto;
 }
 
+/* CLI COMMAND SET */
+.cli-section {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--border-panel);
+}
+
+.cli-panel {
+  background: rgba(13, 20, 35, 0.72);
+  border: 1px solid var(--border-panel);
+  border-radius: 8px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+}
+
+.cli-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cli-kicker {
+  display: block;
+  color: var(--neon-green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.cli-panel h4 {
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.cli-panel code,
+.cli-group code {
+  font-family: 'Source Code Pro', monospace;
+  color: #dbeafe;
+}
+
+.cli-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cli-group {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(6, 9, 19, 0.46);
+}
+
+.cli-group h5 {
+  color: var(--neon-cyan);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.cli-group code {
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  margin-bottom: 8px;
+}
+
 /* FEATURES GRID */
 .features {
   padding: 100px 0;
@@ -909,9 +981,13 @@ header {
 }
 
 .download-specs li::before {
-  content: '✓';
+  content: none;
+}
+
+.feature-check {
   color: var(--neon-cyan);
   font-weight: 700;
+  flex: 0 0 auto;
 }
 
 /* FAQ SECTION */
@@ -1014,6 +1090,13 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
+  .cli-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cli-panel-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
   .mock-layout {
     flex-direction: column;
     height: auto;
@@ -1036,4 +1119,11 @@ footer {
   .nav-menu {
     display: none;
   }
+  .cli-grid {
+    grid-template-columns: 1fr;
+  }
+  .cli-panel {
+    padding: 20px;
+  }
 }
+

@@ -1,4 +1,4 @@
-// NTM v1 Landing Page JavaScript
+﻿// NTM v2 Landing Page JavaScript
 // Interactive Setup Tabs and Time-Travel Visual Simulator
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.copyCommand = function(id) {
     const codeText = document.getElementById(id).innerText;
     navigator.clipboard.writeText(codeText).then(() => {
-      showToast("✓ Command copied to clipboard!");
+      showToast("Command copied to clipboard!");
     }).catch(err => {
       console.error("Failed to copy command:", err);
     });
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
       loss: "82.5%",
       status: "CRITICAL OUTAGE",
       statusClass: "red",
-      logs: "ntm# show rootcause\n[CRITICAL] Link AZ-Core1 Vlan1 ➔ AZ-RT1 e0/0 failed!\n[CRITICAL] Packet drop: 82.5%. Latency: 128 ms.\n[RCA] Blast impact: AZ-Core1 and PC1 disconnected.\n[RCA] Root Cause: Physical line breakdown on GNS3 emulator console Telnet 6005.",
+      logs: "ntm# show rootcause\n[CRITICAL] Link AZ-Core1 Vlan1 -> AZ-RT1 e0/0 failed!\n[CRITICAL] Packet drop: 82.5%. Latency: 128 ms.\n[RCA] Blast impact: AZ-Core1 and PC1 disconnected.\n[RCA] Root Cause: Physical line breakdown on GNS3 emulator console Telnet 6005.",
       nodeStates: { rt: "online", sw: "offline", pc: "offline" },
       linkStates: { rt_sw: "broken", sw_pc: "active" }
     },
@@ -278,3 +278,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
