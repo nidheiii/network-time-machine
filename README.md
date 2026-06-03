@@ -1,21 +1,24 @@
-# NTM v1 Landing Page Website
+# NTM v2
 
-This directory contains a complete, highly attractive product landing and hosting website for **Network Time Machine (NTM) v1**. It is completely static, self-contained, and decoupled from the active running Python project, making it extremely easy to host or share.
+This directory contains a complete, highly attractive product landing and hosting website for **Network Time Machine (NTM) v2**. It is completely static, self-contained, and decoupled from the active running Python backend, making it easy to host, share, or use as a product showcase.
+
+NTM v2 presents the project as a **replay-first network observability and topology intelligence platform** for GNS3 and Cisco network environments.
 
 ## Directory Structure
 
-* **`index.html`**: Responsive semantic HTML5 landing page with custom CSS class structure and embedded SVG vector logos.
-* **`styles.css`**: Styling system featuring a vibrant dark cosmic layout, glassmorphism cards, neon status glow highlights, and responsive flex grids.
-* **`app.js`**: Logic controller managing installation step switching, toast notifications, and a built-in **Visual Time-Travel Simulator** to demonstrate the software features directly on the webpage!
+* **`index.html`**: Responsive semantic HTML5 landing page with custom layout sections, product messaging, embedded visual elements, and download areas.
+* **`styles.css`**: Styling system featuring a vibrant dark cosmic interface, glassmorphism panels, neon status glow effects, responsive sections, and polished product-card layouts.
+* **`app.js`**: Logic controller managing interactive setup tabs, toast notifications, installation guidance, and the built-in **Visual Time-Travel Simulator** used to demonstrate NTM features directly on the webpage.
+* **`NTM_v2_Setup.exe`**: Windows installer package for NTM v2.
+* **`NTM.exe`**: Portable standalone executable for launching NTM without installation.
+* **`NTM_v2_CLI_Command_Set.txt`**: Reference command list for NTM v2 terminal and feature workflows.
 
 ## Key Website Features
 
-1. **Vibrant Modern Design**: Utilizes Google Font Outfit, smooth HSL color gradients, and glassmorphism panel styles to create a sleek corporate product page.
-2. **Interactive GNS3 Timeline Simulator**: Users can drag the range slider to traverse a mock GNS3 topology across 4 timestamp phases (Healthy, High CPU warning, Link failure, Auto-recovery OSPF convergence), displaying updating log entries, latency charts, and alert alarms dynamically.
-3. **Download Product Cards**: Highlights links to download **`NTM_v1_Setup.exe`** (Installer) and **`NTM.exe`** (Portable Executable) with exact file sizes and feature breakdowns.
-4. **Interactive Setup Guides**: Features organized, clean tabbed interfaces guiding users through virtual prerequisites, wizard installations, and local execution steps.
+1. **Vibrant Modern Design**: Uses a dark neon observability theme with glassmorphism panels, glowing cyan/blue accents, smooth gradients, and a polished technical product feel.
 
-## How to View and Host
-
-* **Locally**: Double-click `index.html` to instantly open and view the website in any browser.
-* **Static Hosting**: Upload this folder to GitHub Pages, Netlify, Vercel, or any standard HTTP web server to host it live for your users!
+2. **Replay-First Product Story**: Introduces NTM v2 as a time-machine style network observability platform that helps users understand:
+   ```text
+   What changed?
+   When did it change?
+   What broke because of it?
