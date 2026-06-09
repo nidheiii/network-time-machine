@@ -1,0 +1,435 @@
+V1:
+
+
+help
+clear
+exit
+version
+status
+reload
+
+show topology
+show topology live
+show topology ascii
+show topology json
+show topology graph
+show topology summary
+show topology history
+show topology changes
+show topology links
+show topology nodes
+show topology interfaces
+show topology realtime
+show topology timeline
+
+show devices
+show devices online
+show devices offline
+show devices unstable
+show devices flapping
+show devices inventory
+show device <device>
+show interfaces
+show interfaces up
+show interfaces down
+show interfaces errors
+show interfaces utilization
+
+show links
+show links up
+show links down
+show links unstable
+show links flapping
+show link statistics
+show link failures
+show link utilization
+show link health
+
+show ip
+show ip interfaces
+show ip routing
+show ip learned
+show arp
+show mac
+show gateway
+show subnet
+show vlan
+show vlan interfaces
+
+show health
+show health summary
+show health devices
+show health links
+show health latency
+show health packetloss
+show health stability
+show health score
+show uptime
+show downtime
+show outages
+
+show analytics
+show analytics events
+show analytics trends
+show analytics failures
+show analytics instability
+show analytics topology
+show analytics devices
+show analytics links
+show analytics packetloss
+show analytics latency
+show analytics utilization
+
+show events
+show events live
+show events latest
+show events critical
+show events warnings
+show events failures
+show events topology
+show events devices
+show events links
+show event timeline
+
+replay
+replay start
+replay stop
+replay pause
+replay timeline
+replay topology
+replay failures
+replay outage
+
+show rca
+show rootcause
+show rootcause latest
+show impact
+show blast-radius
+show blast radius
+show dependencies
+show dependency-map
+trace failure
+trace outage
+trace path <source> <destination>
+
+monitor start
+monitor stop
+monitor devices
+monitor links
+monitor latency
+monitor bandwidth
+monitor packetloss
+monitor interfaces
+monitor topology
+monitor events
+
+show latency
+show jitter
+show packetloss
+show throughput
+show bandwidth
+show cpu
+show memory
+show utilization
+show traffic
+show congestion
+
+show stability
+show stability score
+show flaps
+show unstable devices
+show unstable links
+show frequent failures
+show outage frequency
+
+show anomalies
+show suspicious
+show rogue devices
+show unauthorized
+show topology tampering
+show security events
+show failed logins
+show scans
+
+simulate outage
+simulate outage <device>
+simulate link-failure
+simulate node-failure <device>
+simulate latency
+simulate congestion
+simulate packetloss
+simulate topology-change
+simulate recovery
+simulate recovery <device>
+simulate stress <device>
+simulate traffic-load <Mbps>
+
+show inventory
+show inventory devices
+show inventory interfaces
+show inventory modules
+show inventory topology
+show inventory ports
+
+forensic replay
+forensic timeline
+forensic outage
+forensic incident
+forensic topology
+forensic recovery
+
+ai analyze
+ai predict
+ai recommend
+ai rootcause
+ai summarize
+ai detect anomaly
+
+export topology
+export replay
+export analytics
+export events
+export inventory
+export json
+export csv
+export report
+
+session save
+session load
+session replay
+session export
+session history
+
+live topology
+live events
+live monitor
+live traffic
+live replay
+
+find device <name>
+find ip <ip>
+find link <device1> <device2>
+search events
+search outages
+search failures
+
+show telemetry
+show netflow
+show bgp
+show ospf
+show spanning-tree
+show route changes
+show neighbor changes
+show protocol health
+
+time travel
+timeline
+timeline list
+timeline scrub
+timeline scrub <frame_id>
+timeline diff
+timeline compare
+timeline replay
+timeline monitor 24h
+timeline save
+timeline save <file.json>
+timeline load
+timeline load <file.json>
+timeline start scrub
+timeline delete scrub
+timeline remove scrub
+timeline end scrub
+timeline delete frame <frame_id>
+timeline remove frame <frame_id>
+start scrub
+delete scrub
+end scrub
+remove scrub
+delete frame <frame_id>
+remove frame <frame_id>
+
+reconstruct outage
+animate topology
+predict next outage
+show attack path
+show diff topology
+show diff routing
+show alerts active
+show alerts history
+clear alerts
+auto-remedy enable
+auto-remedy disable
+auto-remedy status
+
+cisco devices
+cisco backup
+cisco history
+cisco config diff
+cisco webhook
+
+open web
+show visualization
+visualize path <device1> <device2>
+visualize blast <device>
+visualize anomalies
+visualize reset
+
+V2:
+
+
+ntm commands
+ntm help
+
+ntm system status
+ntm system health
+ntm system info
+ntm system reload
+ntm system restart
+
+ntm service list
+ntm service telemetry
+ntm service replay
+ntm service analytics
+
+ntm topology show
+ntm topology map
+ntm topology live
+ntm topology summary
+ntm topology historical
+ntm topology historical --timestamp 12:41:03
+ntm topology compare
+ntm topology diff
+ntm topology trace PC1 PC4
+ntm topology shortest-path
+ntm topology dependencies
+
+ntm replay start
+ntm replay pause
+ntm replay resume
+ntm replay stop
+ntm replay scrub
+ntm replay timeline
+ntm replay jump 12:41:03
+ntm replay speed 2x
+ntm replay speed 4x
+ntm replay reconstruct
+ntm replay snapshot
+ntm replay restore
+ntm replay compare session1 session2
+ntm replay timeline --from 12:30 --to 12:45
+
+ntm ospf neighbors
+ntm ospf adjacency
+ntm ospf topology
+ntm ospf lsa
+ntm ospf flood
+ntm ospf database
+ntm ospf convergence
+ntm ospf failover
+ntm ospf events
+
+ntm stp root
+ntm stp ports
+ntm stp blocked
+ntm stp topology-change
+ntm stp convergence
+
+ntm bgp peers
+ntm bgp routes
+ntm bgp bestpath
+ntm bgp withdraw
+ntm bgp advertisements
+
+ntm packet trace
+ntm packet flow
+ntm packet inspect
+
+ntm flow show
+ntm flow latency
+ntm flow drops
+
+ntm telemetry live
+ntm telemetry cpu
+ntm telemetry memory
+ntm telemetry bandwidth
+
+ntm interface show
+ntm interface errors
+ntm interface drops
+ntm interface utilization
+
+ntm rca analyze
+ntm rca rootcause
+ntm rca impact
+ntm rca blast-radius
+ntm rca blast-radius SW1
+ntm rca affected-nodes
+
+ntm events timeline
+ntm events chain
+ntm events correlate
+
+ntm security anomalies
+ntm security rogue-nodes
+ntm security exposed-ports
+ntm security auth
+ntm security failed-logins
+
+ntm vlan show
+ntm vlan trunks
+ntm vlan broadcast-domains
+ntm vlan routing
+
+ntm arp table
+ntm arp requests
+
+ntm mac table
+ntm mac learning
+
+ntm acl show
+ntm acl hits
+ntm acl denied
+
+ntm firewall rules
+
+ntm nat translations
+ntm nat sessions
+ntm nat inspect
+
+ntm dhcp leases
+ntm dhcp discover
+ntm dhcp offers
+
+ntm dns resolve
+ntm dns cache
+ntm dns trace
+
+ntm simulate link-down
+ntm simulate packet-loss
+ntm simulate latency
+ntm simulate node-failure
+ntm simulate ospf-failure
+ntm simulate stp-loop
+
+ntm session save
+ntm session load
+ntm session export
+ntm session archive
+
+ntm report incident
+ntm report topology
+ntm report replay
+
+ntm export pdf
+ntm export json
+ntm export timeline
+
+ntm analytics uptime
+ntm analytics churn
+ntm analytics stability
+ntm analytics trends
+ntm analytics incidents
+
+ntm workspace list
+ntm workspace switch
+ntm workspace create
