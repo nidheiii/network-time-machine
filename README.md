@@ -58,19 +58,6 @@ graph TD
     SM <-->|Read/Write Cache| DB
 ```
 
-### Key Modules:
-* [app.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/app.py): Entry point coordinating console server, browser auto-launch, and GNS3 port checks.
-* [orchestrator.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/orchestrator.py): Polling loop scrape manager, alarm triggers, and 1-hour timeline pruner.
-* [state_manager.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/state_manager.py): Session log compiler and memory index snapshot states manager (supporting state cache isolation on GNS3 project switches).
-* [api_server.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/api_server.py): Flask blueprints for sockets routing, REST JSON state endpoints, and Discord webhook configurations.
-* [v2_intelligence.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/v2_intelligence.py): Core analytics engine calculating weighted Network Health, event-based Replay Timeline widget payloads, and Root Cause Analysis.
-* [cisco_config_time_machine.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/cisco_config_time_machine.py): Automated configuration collector, Noise-Filtered Command-level diff builder, and Operational Report exporter.
-* [cli_engine.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/cli_engine.py): Main terminal text command parser executing commands like `timeline start scrub` and `show topology live`.
-* [console_proxy.py](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/console_proxy.py): Low-level Telnet connector mapping network consoles to WebSockets.
-* [frontend/index.html](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/frontend/index.html): Main console browser layout, D3 visualization rendering, Discord webhook management panel, Resizable Splitters dragging script, and console styling.
-
----
-
 ## Setup & Launch Guide
 
 ### 1. Standalone Portable Executable (Fastest)
