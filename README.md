@@ -57,27 +57,6 @@ graph TD
     API <-->|Sync State| SM
     SM <-->|Read/Write Cache| DB
 ```
-
-## Setup & Launch Guide
-
-### 1. Standalone Portable Executable (Fastest)
-1. Navigate to the downloads folder [ntm-web/](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/ntm-web/).
-2. Run **`NTM.exe`** (Zero-Install standalone).
-3. The server will boot, start Telnet proxies locally, and automatically launch your default browser to **`http://localhost:5050`**.
-
-### 2. Windows Installer Setup Wizard
-1. Navigate to [ntm-web/](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/ntm-web/).
-2. Double-click **`NTM_v3_Setup.exe`**.
-3. Follow the wizard. It places the app under `Program Files\Network Time Machine`, registers the desktop shortcut with the brand icon, and provides a control panel uninstaller.
-
-> [!WARNING]
-> **Windows SmartScreen Notice**: If Windows blocks the files with a *"These files can't be opened"* warning:
-> 1. Open File Explorer and find the downloaded file in your `Downloads` folder.
-> 2. Right-click the `.exe` file and select **Properties**.
-> 3. Under the General tab, check the **Unblock** box at the bottom, click **Apply**, and launch the app.
-
----
-
 ## Developer Compilation & Build Pipeline
 
 If you want to modify assets or backend scripts, you can rebuild the executable binaries and setup files:
