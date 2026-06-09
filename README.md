@@ -57,32 +57,6 @@ graph TD
     API <-->|Sync State| SM
     SM <-->|Read/Write Cache| DB
 ```
-## Developer Compilation & Build Pipeline
-
-If you want to modify assets or backend scripts, you can rebuild the executable binaries and setup files:
-
-### Build Requirements
-* Python 3.12+ (dependencies: Flask, Flask-SocketIO, Eventlet, PyInstaller, netmiko, requests)
-* Inno Setup Compiler 6 (available at AppData folder)
-
-### Recompiling Standalone `NTM.exe`
-Run the PyInstaller packaging script:
-```powershell
-# Inside backend/ folder
-python -m PyInstaller --clean --onefile --name "NTM" --add-data "frontend;frontend" --hidden-import "engineio.async_drivers.threading" --hidden-import "socketio" --hidden-import "engineio" --hidden-import "flask" --hidden-import "flask_cors" --hidden-import "flask_socketio" --hidden-import "netmiko" --hidden-import "paramiko" --hidden-import "ntc_templates" --hidden-import "requests" --icon "logo-icon.ico" app.py
-```
-This cleans build caches, bundles frontend folders, and compiles output into `dist/NTM.exe`.
-
-### Rebuilding Windows Setup Wizard `NTM_v3_Setup.exe`
-Run the Inno Setup compiler referencing the [setup.iss](file:///C:/Users/nidhi/PycharmProjects/Network-Time-Machine/backend/setup.iss) script:
-```powershell
-# Inside backend/ folder
-& "C:\Users\nidhi\AppData\Local\Programs\Inno Setup 6\ISCC.exe" setup.iss
-```
-This compiles and packages the setup program into `installer/NTM_v3_Setup.exe`.
-
----
-
 ## CLI Commands Cheat Sheet
 
 Type these commands directly inside the **NTM Interactive Terminal** on the dashboard or use the click shortcuts:
